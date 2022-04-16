@@ -3,5 +3,9 @@
 <ul>
   <% @tasks.each do |task| %>
     <li><%= task.title %></li>
+    <%= link_to "Voir", task_path(task) %>
+    <%= link_to "Supprimer", task_delete_path(task), method: :delete %>
   <% end %>
 </ul>
+
+    <%= link_to "+ nouvelle task", tasks_new_path %>
